@@ -1,10 +1,9 @@
-import LoginForm from './Components/login';
 import './App.css';
-
+import Home from './Components/home'
 function App() {
   return (
+    <Home></Home>
     
-    <LoginForm/>
      
   
   );
