@@ -1,8 +1,9 @@
 import './App.css';
 import Home from './Components/home'
+import LoginForm from './Components/login';
 function App() {
   return (
-    <Home></Home>
+ <LoginForm></LoginForm>
     
      
   
