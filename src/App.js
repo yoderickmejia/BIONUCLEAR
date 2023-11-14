@@ -1,12 +1,20 @@
-import './App.css';
+import React  from 'react';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// Asegúrate de que el nombre del componente sea correcto
 import Home from './Components/home'
-import LoginForm from './Components/login';
+import Login from '../src/Components/login';
+
+// Asegúrate de que el nombre del componente sea correcto
 function App() {
-  return (
- <LoginForm></LoginForm>
-    
-     
   
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/Login' element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

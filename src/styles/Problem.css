@@ -1,0 +1,38 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,400;1,900&display=swap');
+
+/* Asegúrate de que la clase "container-fluid" tenga display: flex y flex-wrap: wrap */
+.Problem-div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Establece un ancho máximo para la imagen si es necesario */
+  .img-fluid.Problem {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Alinea la imagen y el texto verticalmente en el contenedor */
+  .Problem-div > .div1 {
+    flex: 1;
+  /* Ajusta el margen según sea necesario */
+  }
+  
+  /* Ajusta el tamaño del texto según sea necesario */
+  .Problem-p {
+    font-family: 'Montserrat', Courier, monospace;
+    font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  
+  @media screen and (max-width: 900px){
+	
+    
+    .Problem-div > .div1 {
+        flex:1;     
+           margin: 0px; /* Ajusta el margen según sea necesario */
+      }
+}

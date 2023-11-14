@@ -1,135 +1,19 @@
 
-.container-fluid{
-    background-color: #00C3B7;
-    color: white; /* Color naranja como ejemplo */
-  }
 
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,400;1,900&display=swap');
 
-
-
-  i {
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .icono:hover {
-    transform: scale(1.2); 
-   /* Aumenta el tamaño al hacer hover */
-  }
-  
-  .icono:active {
-    transform: scale(0.9); /* Disminuye el tamaño al hacer clic */
-  }
-  
-  .btn-square {
-    
-    font-size: x-large;
-    font-weight: 1000;
-    font-family: 'monserrat' system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 0;
-
-}
-boton:hover{
-  background-color: black;
-}
-.btn-3d, input[type='submit'].btn-3d {
-    height: 44px;
-    line-height: 44px;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    transition: all 0.25s;
-}
-
-.btn-3d {
-  text-decoration: none; 
-  
-}
-
-
-
-
-
-.text-right .btn, .text-right .widget_price_filter .price_slider_amount button, .widget_price_filter .price_slider_amount .text-right button, .text-right .widget_shopping_cart .buttons a, .widget_shopping_cart .buttons .text-right a, .text-right .woocommerce .woocommerce-Pagination a.button, .woocommerce .woocommerce-Pagination .text-right a.button, .text-right .woocommerce .woocommerce-Pagination button.button, .woocommerce .woocommerce-Pagination .text-right button.button, .text-right .comment .reply-link .comment-reply-link, .comment .reply-link .text-right .comment-reply-link, .text-right .nav-links .page-numbers.prev, .nav-links .text-right .page-numbers.prev, .text-right .nav-links .page-numbers.next, .nav-links .text-right .page-numbers.next, .text-right .vertical-navigation>ul .menu-item-has-children>a>.arrow, .vertical-navigation>ul .text-right .menu-item-has-children>a>.arrow, .text-right .vertical-navigation>ul .has-mega-menu>a>.arrow, .vertical-navigation>ul .text-right .has-mega-menu>a>.arrow, .text-right .woocommerce table.shop_table .button, .woocommerce table.shop_table .text-right .button, .text-right .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce .cart-collaterals .cart_totals .text-right .checkout-button, .text-right .woocommerce-page .cart-collaterals .cart_totals .checkout-button, .woocommerce-page .cart-collaterals .cart_totals .text-right .checkout-button, .text-right .woocommerce button.button.alt, .woocommerce .text-right button.button.alt, .text-right .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-info .text-right .button, .text-right .woocommerce .woocommerce-error .button, .woocommerce .woocommerce-error .text-right .button, .text-right .woocommerce .woocommerce-message .button, .woocommerce .woocommerce-message .text-right .button, .text-right .woocommerce #respond input#submit.alt, .woocommerce #respond .text-right input#submit.alt, .text-right .woocommerce a.button.alt, .woocommerce .text-right a.button.alt, .text-right .return-to-shop .button.wc-backward, .return-to-shop .text-right .button.wc-backward, .text-right .woocommerce-MyAccount-content .woocommerce-Address-title a, .woocommerce-MyAccount-content .woocommerce-Address-title .text-right a, .text-right .woocommerce .login .form-row input.button, .woocommerce .login .form-row .text-right input.button, .text-right .woocommerce input.button, .woocommerce .text-right input.button {
-    margin-right: 0;
-    margin-left: 12px;
-}
-.btn-3d.btn-danger, .woocommerce .woocommerce-error .btn-3d.button, input[type='submit'].btn-3d.btn-danger, .woocommerce .woocommerce-error input[type='submit'].btn-3d.button {
-    background-color: #36b49f;
-    color: #fff;
-    box-shadow: 0 4px 0 #2b9e88;
-    font-family: l;
-}
-.btn-square {
-    border-radius: 0;
-}
-.btn-3d, input[type='submit'].btn-3d {
-    height: 44px;
-    line-height: 44px;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    transition: all 0.25s;
-}
-.btn-danger, .woocommerce .woocommerce-error .button, input[type='submit'].btn-danger, .woocommerce .woocommerce-error input[type='submit'].button {
-    background-color: #fff;
-    color: #fff;
-}
-
-.btn, .widget_price_filter .price_slider_amount button, .widget_shopping_cart .buttons a, .woocommerce .woocommerce-Pagination a.button, .woocommerce .woocommerce-Pagination button.button, .woocommerce .woocommerce-Pagination input.button, .comment .reply-link .comment-reply-link, .nav-links .page-numbers.prev, .nav-links .page-numbers.next, .vertical-navigation>ul .menu-item-has-children>a>.arrow, .vertical-navigation>ul .has-mega-menu>a>.arrow, .woocommerce table.shop_table .button, .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-page .cart-collaterals .cart_totals .checkout-button, .woocommerce button.button.alt, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-error .button, .woocommerce .woocommerce-message .button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce input.button.alt, .woocommerce .checkout_coupon input.button, .return-to-shop .button.wc-backward, .woocommerce .track_order input.button, .woocommerce-MyAccount-content .woocommerce-Address-title a, .woocommerce .login .form-row input.button, .woocommerce input.button, input[type='submit'] {
-    display: inline-block;
+  .content{
     position: relative;
-    height: 48px;
-    margin: 12px 12px 12px 0;
-    padding: 0 14px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: transparent;
-    background-image: none;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 46px;
-    white-space: nowrap;
-    cursor: pointer;
-    vertical-align: middle;
-    text-transform: none;
-    text-decoration: none;
-    text-align: center;
-    touch-action: manipulation;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
+  }
+  .Header .Navb  .Carrousel{
+    position: absolute;
+    z-index: 1;
+  }
 
-.waves-effect {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  .LoginForm{
+    position: absolute;
+    z-index: 2;
+  }
 
-}
+
+  

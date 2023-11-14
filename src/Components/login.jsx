@@ -1,12 +1,42 @@
-import React, { useState } from 'react';
-
-import  "../styles/Login.css"
-import Image from "../Images/Image.png"
+import React, { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import {  Redirect } from 'react-router-dom';
+import wave  from '../Images/wave.png'
+import avatar from '../Images/avatar.svg'
+import bg from '../Images/bg.svg'
+import '../styles/Login.css';
+import { Fade } from "react-awesome-reveal";
 
 
 const LoginForm = () => {
+  useEffect(() => {
+    const inputs = document.querySelectorAll(".input");
+
+    function addcl() {
+      let parent = this.parentNode.parentNode;
+      parent.classList.add("focus");
+    }
+
+    function remcl() {
+      let parent = this.parentNode.parentNode;
+      if (this.value === "") {
+        parent.classList.remove("focus");
+      }
+    }
+
+    inputs.forEach((input) => {
+      input.addEventListener("focus", addcl);
+      input.addEventListener("blur", remcl);
+    });
+
+    return () => {
+      inputs.forEach((input) => {
+        input.removeEventListener("focus", addcl);
+        input.removeEventListener("blur", remcl);
+      });
+    };
+  }, []);
+/*
   const [formData, setFormData] = useState({
     user: '',
     password: '',
@@ -20,65 +50,69 @@ const LoginForm = () => {
     });
   };
 
+  const [redirectToHome, setRedirectToHome] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes realizar la solicitud a la API utilizando Axios
-    // Usa formData.username y formData.password para enviar los datos de inicio de sesión
-    // Por ejemplo:
-    axios.post('https://localhost:44367/api/usuario', formData)
+
+    axios
+      .post('https://localhost:44367/api/usuario', formData)
       .then((response) => {
-        // Maneja la respuesta de la API según tus necesidades
+        console.log(formData);
         console.log(response.data);
-        if(response.data===true){
-          <navigator to="/home.jsx" />
+
+        if (response.data === true) {
+          setRedirectToHome(true);
         }
       })
       .catch((error) => {
-        // Maneja los errores de la solicitud, por ejemplo, muestra un mensaje de error
         console.error(error);
       });
   };
 
+  if (redirectToHome) {
+    return <Link to={'/Home'}></Link>;
+  }
+  */
+
   return (
-    
-    <div className='d-flex p-3 justify-content-center align-items-center vh-100'>
-     
-    <div className="wrapper m-2 p-2 ">
-      <div className="text-center">
-        <img src={Image} alt="Logo" />
-      </div>
-      <div className="text-center mt-4 name">
-        LabPlus
-      </div>
-      <form onSubmit={handleSubmit} >
-        <div className="form-field d-flex align-items-center">
-          <span className="far fa-lg m-2 fa-user "></span>
-          <input    type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-           
-           id="userName"
-            placeholder="Username" />
+    <Fade>
+    <div className='eldiv p-0 m-0'>
+    <img className="wave h-100 position-fixed bottom-0 left-0 " alt='klk' src={wave}/>
+	<div className="container ">
+		<div className="img align-items-center justify-content-center">
+			<img className='w-100' alt='klk' src={bg}/>
+		</div>
+		<div className="login-content  align-items-center  justify-content-flex-start">
+			<form className='w-75'>
+				<img className='w-25' alt='klk' src={avatar}/>
+				<h2 className="title">Welcome</h2>
+           		<div className="input-div   one top-0 position-relative p-2">
+           		   <div className=" i align-items-center justify-content-center">
+           		   		<i className="fas fa-user "></i>
+           		   </div>
+           		   <div className="div  position-relative ">
+           		   		<h5 className='position-absolute fs-18'>Username</h5>
+           		   		<input  id='input1' type="text" className="input" />
+           		   </div>
+           		</div>
+           		<div className="input-div  position-relative p-2  pass">
+           		   <div className="i align-items-center justify-content-center"> 
+           		    	<i className="fas fa-lock"></i>
+           		   </div>
+           		   <div className="div position-relative ">
+           		    	<h5  className='position-absolute fs-18'>Password </h5>
+           		    	<input id='input1' type="password" className="input"/>
+            	   </div>
+            	</div>
+            	
+            	<input type="submit"  id='btn' className="btn border-0  fs-1.2rem cursor-pointer w-100 h-100" value="Login"/>
+            </form>
         </div>
-        <div className="form-field d-flex align-items-center">
-          <span className="m-2 fa-sm fas fa-key"></span>
-          <input  type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-           id="pwd" placeholder="Password" />
-       
-        </div>
-       <div>
-       <button className="btn  w-100 h-100 ">Login</button>
-       </div>
-      </form>
     </div>
-  </div>
-  
-  
+    </div>
+    </Fade>
   );
-}
+};
 
 export default LoginForm;
