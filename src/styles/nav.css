@@ -1,3 +1,6 @@
 #Name {
     color: #29BF8B;
   }
+  .nav-link{
+    list-style: none;
+  }

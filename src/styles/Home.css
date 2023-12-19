@@ -2,18 +2,20 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:ital,wght@0,500;0,900;1,400;1,900&display=swap');
 
-  .content{
-    position: relative;
-  }
-  .Header .Navb  .Carrousel{
-    position: absolute;
-    z-index: 1;
-  }
 
-  .LoginForm{
-    position: absolute;
-    z-index: 2;
+.Cualidades{
+  width: 100%;
+  font-family:  'Montserrat', sans-serif;
+  font-size: 10vh;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px){
+  .Cualidades{
+    width: 100%;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 5vh;
+    font-weight: 500;
   }
-
-
   
+}

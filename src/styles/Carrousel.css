@@ -6,6 +6,7 @@
 justify-content: center;
   text-align: center; /* Centra el contenido horizontalmente */
   font-size:18vh;
+  padding: auto;
 }
 .ImagenLogo{
   width: 31vw;
@@ -16,6 +17,7 @@ margin-right: 10%;
 }
 .Carrousel{
   margin-top: 2%;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +59,7 @@ margin-right: 5%;
 .Carrousel{
   margin-top: 2%;
   display: flex;
+  height: 30vh;
   align-items: center;
   justify-content: center;
 }

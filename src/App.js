@@ -1,11 +1,9 @@
 import React  from 'react';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// Asegúrate de que el nombre del componente sea correcto
 import Home from './Components/home'
 import Login from '../src/Components/login';
+import Campus from './Components/Campus'
 
-// Asegúrate de que el nombre del componente sea correcto
 function App() {
   
   return (
@@ -13,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/Campus' element={<Campus />} />
       </Routes>
     </BrowserRouter>
   );

@@ -206,9 +206,7 @@ a:hover{
 		display: none;
 	}
 
-	#input1{
-		color: white;
-	}
+	
 	
 	.input-div.focus > .i > i{
 		color: #38d39f;
